@@ -1,0 +1,501 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER */
+
+.header-top {
+    background-color: #ff671d;
+    font-size: small;
+    padding: .3rem;
+}
+
+.header-top p,
+.header-top ul {
+    margin: 0;
+}
+
+.header_logo img {
+    width: 9rem;
+    height: 5rem;
+}
+
+.txtUnderline {
+    text-decoration: underline;
+}
+
+.navTop {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+}
+
+.myLogo img {
+    width: 13rem;
+    height: 3rem;
+}
+
+.searchButton {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid #d9d9d9;
+    background-color: #fffcfa;
+    border-right: none;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    z-index: 4;
+    position: absolute;
+    left: -11.6%;
+}
+
+.searchInput {
+    width: 30rem;
+    height: 3.5rem;
+    border: 1px solid #d9d9d9;
+    background-color: #fffcfa;
+    border-left: none;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    position: relative;
+    z-index: 4;
+}
+
+.searchInput:focus {
+    outline-color: #ff6600;
+    border-left: none;
+}
+
+.searchInput:focus+.inputDropdown {
+    display: block;
+}
+
+.inputDropdown {
+    width: 111.8%;
+    height: 36rem;
+    display: none;
+    border: 2px solid #ff6600;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+    background-color: #f4f4f4;
+    color: #111;
+    position: absolute;
+    top: 90%;
+    left: -11.6%;
+    z-index: 3;
+    overflow-y: scroll;
+}
+
+.searchesBody {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.sectionBody {
+    height: 8rem;
+    display: flex;
+    padding: .7rem;
+    align-items: center;
+    margin-top: .5rem;
+    border-radius: .5rem;
+    gap: 1.5rem;
+    background-color: white;
+}
+
+.imgContainer img {
+    width: 4rem;
+    height: 5.3rem;
+}
+
+.textBody {
+    cursor: pointer;
+}
+
+.textBody p {
+    margin: 0;
+    padding-right: 5rem;
+}
+
+.textBody span {
+    color: #ff6600;
+}
+
+.textBody del {
+    padding-right: .5rem;
+}
+
+.loginRegisterContain ul {
+    height: 3.5rem;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+}
+
+.listItem {
+    position: relative;
+}
+
+.listItem a {
+    font-size: x-small;
+    padding: 1rem;
+}
+
+.loginDropdown {
+    width: 16rem;
+    z-index: 10;
+    background-color: #f8f8f8;
+    border: .5px solid #cecece;
+    position: absolute;
+    top: 200%;
+    left: -100%;
+    display: none;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.loginBtn {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f60;
+    border: none;
+    border-radius: .2rem;
+    color: #fff;
+}
+
+.registerBtn {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #525252 !important;
+    border-radius: .2rem;
+    color: #525252;
+}
+
+.hoverDiv:hover+.loginDropdown {
+    display: flex;
+    z-index: 5;
+}
+
+/* NAV */
+
+nav {
+    position: relative;
+    background: #f8f8f8;
+    border-top: 1px solid #e2e2e2;
+}
+
+.nav_inner {
+    padding: 0 2.5rem;
+}
+
+.dropdownMenu {
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.nav_item:hover>.dropdownMenu {
+    display: block !important;
+}
+
+.categoryContain {
+    width: 20rem;
+    border-right: 1px solid #ebebeb;
+    padding-left: 2.5rem;
+    padding-right: .5rem;
+}
+
+.categoryContain a:hover {
+    color: #f60;
+}
+
+.firstContain {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ebebeb;
+    padding: 1rem 0;
+}
+
+.firstContain span:nth-child(2):hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.secondContain {
+    padding: 1rem 0;
+}
+
+.containMenu {
+    display: flex;
+}
+
+.containMenuBottom {
+    padding: 0 3.2rem;
+}
+
+.menuItems ul {
+    display: flex;
+    gap: .5rem;
+}
+
+.dropdownButton {
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    margin-bottom: .7rem;
+    border-radius: .3rem;
+    background-color: #ebebeb;
+    text-align: center;
+}
+
+.dropdownButton:hover {
+    background-color: #f60;
+    color: white;
+}
+
+/* MAİN */
+
+/* FİRST SECTİON */
+
+.swiper-button-prev1,
+.swiper-button-next1 {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+/*SECOND SECTİON*/
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.categoryItem {
+    width: 4.2rem;
+    height: 4.2rem;
+}
+
+/* THİRD SECTİON */
+
+.pictureContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-image: linear-gradient(180deg, #e4e6eb, #fff);
+    margin-bottom: 7rem;
+}
+
+.pictureTitle {
+    display: block;
+    position: absolute;
+    top: -6%;
+    padding: .6rem 1.25rem;
+    border-radius: .25rem;
+    background-color: #e4e6eb;
+    font-size: 1.8rem;
+    color: #6f6f6f;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.pictureContent {
+    padding-top: 5rem;
+}
+
+.pictureContent img {
+    width: 100%;
+    border-radius: .5rem;
+    box-shadow: 0 8px 27px 0 rgba(114, 124, 142, .25);
+}
+
+.pictureContent img:hover {
+    transform: perspective(1000px) translateZ(21px);
+    transition: transform .5s;
+    box-shadow: 0 3px 30px rgba(0, 0, 0, .4);
+}
+
+/* FOURTH SECTİON */
+
+.productItem {
+    text-align: left;
+}
+
+.productBrand h6 {
+    font-size: 1.1rem;
+}
+
+.productName h6 {
+    width: 14rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #989898;
+}
+
+.productPrice span {
+    color: #f60;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 3rem;
+    height: 3rem;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    border: 1px solid #e2e2e2;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: large;
+    font-weight: bold;
+}
+
+/* FİFTH SECTİON */
+
+footer {
+    background: #f5f6f8;
+    color: #5e5e5e;
+}
+
+.textContain {
+    margin: 2rem 0;
+    max-height: 15rem;
+    overflow-y: scroll;
+    font-size: 1rem;
+    color: #000;
+}
+
+.footerLinksLeft {
+    width: 50%;
+}
+
+.footerLinkItem {
+    width: 32%;
+    float: left;
+    margin: .5rem;
+    padding: .3rem .5rem;
+    border-bottom: 2px solid rgba(0, 0, 0, .06);
+    font-size: small;
+}
+
+.rightTitle p {
+    text-align: center;
+    font-size: .9rem;
+    border-bottom: 2px solid rgba(0, 0, 0, .06);
+    padding: .2rem .4rem;
+}
+
+.small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.application {
+    display: flex;
+    gap: .5rem;
+}
+
+.application img {
+    width: 9rem;
+}
+
+.footerCard {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px 0 #e7eaf0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: .5rem;
+}
+
+.footerCard span {
+    font-size: 1rem;
+    width: 14.55rem;
+}
+
+.footerCard2 {
+    height: 5rem;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px 0 #e7eaf0;
+    background-color: #fff;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.footerCard2 ul {
+    display: flex;
+}
+
+.footerCard2 .paymentImage {
+    width: 14rem;
+    height: 3.7rem;
+    padding: 1rem 0;
+    position: absolute;
+    left: 40%;
+}
+
+.footerCard2 .qrCode {
+    width: 3rem;
+    height: 4rem;
+    position: absolute;
+    right: 1%;
+}
